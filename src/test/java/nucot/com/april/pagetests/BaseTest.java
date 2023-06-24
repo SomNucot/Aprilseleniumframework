@@ -4,26 +4,26 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import nucot.april.initialsetup.Driversetup;
-import nucot.com.april.pages.LoginPage2;
+import nucot.com.april.pages.LoginPage;
 
-public class BaseTest2 {
+public class BaseTest {
 	
-	Driversetup dsObj;
-	public WebDriver odriver;
-	protected LoginPage2 loginPageObj;
+	 Driversetup dsObj;
+	 WebDriver odriver;
+	public LoginPage ologinPage;
 	
 	@BeforeTest
 	void setUp(){
 		dsObj=new Driversetup();
-		dsObj.initDriverSetUp("chrome");
-		loginPageObj=new LoginPage2(odriver);	
+		odriver=dsObj.initDriverSetUp("chrome");
+		ologinPage=new LoginPage(odriver);	
 	}
 
 	
 	
-	
 	@AfterTest
 	void closeApp(){
-	odriver.close();
+		odriver.quit();
 	}
+	
 }

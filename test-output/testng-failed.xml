@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="nucot.com.april.pagetests.LoginPageTest2">
+      <class name="nucot.com.april.pagetests.LoginPageTest">
         <methods>
-          <include name="closeApp"/>
-          <include name="getCurrentTitleLoginPageTest"/>
-          <include name="setUp"/>
-          <include name="doLoginPageTest"/>
-          <include name="getCurrentUrlLoginPageTest"/>
+          <include name="getUrl"/>
+          <include name="loginPageTitleTest"/>
+          <include name="loginTest"/>
         </methods>
-      </class> <!-- nucot.com.april.pagetests.LoginPageTest2 -->
+      </class> <!-- nucot.com.april.pagetests.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
